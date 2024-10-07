@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon API</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+  <div class="top">
+    <h1>Search a <span>Pokémon</span></h1>
+    <div class="search-container">
+      <input style="text-transform: capitalize" spellcheck="false" type="text" id="pokemon-name" placeholder="Enter Pokemon Name or Dex #">
+      <button onclick="fetchData()"><img width="60" src="images/pokeball.png"></button>
+    </div>
+    <button class="random-button" onclick="chooseRandom()">Random!</button>
+  </div>
+
+  
+  <div class="attributes">
+    <h2 class="name-box" style="display: none" ></h2>
+    <img src="" alt="Pokemon Sprite" id="pokemon-sprite" style="display: none;">
+    <div class="type-box">
+      <div class="type-1" style="display: none;"></div>
+      <div class="type-2" style="display: none;"></div>
+    </div>
+  </div>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
