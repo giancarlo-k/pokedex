@@ -2,9 +2,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: none;
   padding: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h1 span {
+h1 {
+  color: #ee1515;
+}
+
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}
+
+h1 a span {
   color: #ee1515;
 }
 
@@ -22,11 +38,11 @@ h1 span {
   border: solid 3px black;
   border-radius: 40px;
   max-width: 700px;
-  padding: 10px 20px 10px 30px;
+  padding: 8px 16px 8px 24px;
   justify-content: space-between;
 }
 
-input {
+.search-container input {
   color: black;
   font-size: 18px;
   background: transparent;
@@ -50,71 +66,138 @@ input {
   transition: 2s;
 }
 
-.random-button {
-  margin-top: 30px;
-  background-color: #ee1515;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 42px;
-  cursor: pointer;
-  font-size: 12px;
-  border: 2px solid black;
-}
-
 .search-container button img:hover {
   filter: opacity(0.7);
 }
 
 @keyframes rotate {
   from {
-      transform: rotate(0deg); /* Start at 0 degrees */
+      transform: rotate(0deg); 
   }
   to {
-      transform: rotate(360deg); /* Rotate full circle (360 degrees) */
+      transform: rotate(360deg);
   }
-}
-
-/*-----------------POKEMON INFO--------------*/
-
-.attributes {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.name-box {
-  margin-top: 30px;
-  font-weight: 500;
-}
-.name-box span {
-  font-style: italic;
-}
-
-.attributes img {
-  width: 280px;
-  height: 280px;
-}
-
-.type-box {
-  display: flex;
-  column-gap: 20px;
-  padding: 20px;
-}
-
-.type-box div {
-  width: 110px;
-  height: 40px;
-  border-radius: 30px;
-  margin-top: 5px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  color: white;
-  box-shadow: 1px 1px 10px rgb(146, 146, 146);
 }
 
 .false-input {
   border-color: #ee1515;
+}
+
+/*----------------ALL POKEMON-----------------*/
+
+.allPokemonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.pokemonCard {
+  width: 150px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 2px solid;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.caught {
+  position: absolute;
+  width: 30px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  animation: rotate 6s linear infinite;
+}
+
+.caught:hover {
+  width: 35px;
+  top: 7px;
+  right: 7px
+}
+
+.notCaught {
+  filter: grayscale(1);
+}
+
+
+.eachTypeBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.eachTypeBox.single {
+  justify-content: center
+}
+
+.eachTypeBox.single div:first-child,
+.eachTypeBox.dual div
+ {
+  width: 80px;
+  height: 35px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 10px rgb(146, 146, 146);
+}
+
+.eachTypeBox.dual {
+  justify-content: space-around
+}
+
+.amount-caught-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  font-size: 18px;
+}
+
+.amount-caught-box img {
+  margin-bottom: 2px;
+  margin-left: 4px;
+}
+
+.star-icon {
+  position: absolute;
+  right: -8px;
+  bottom: 14px;
+  animation: scale 1s alternate infinite ease-in-out;
+}
+
+.catch-all {
+  border: 1px solid black;
+  margin-top: 15px;
+  background: #ee1515;
+  color: white;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: 0.12s ease-in-out;
+}
+
+.catch-all:hover {
+  background: #ffffff;
+  color: #ee1515;
+}
+
+@keyframes scale {
+  from {
+      transform: scale(1)
+  }
+  to {
+      transform: scale(1.2)
+  }
 }
