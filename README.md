@@ -1,3 +1,3 @@
 # Pokedex
 
-[click here](www.google.com)
+[Website]([www.google.com](https://giancarlo-k.github.io/pokedex/))
