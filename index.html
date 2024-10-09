@@ -9,24 +9,23 @@
 <body>
   
   <div class="top">
-    <h1>Search a <span>Pokémon</span></h1>
+    <h1><a href="index.html"><span>Kanto</span> Pokédex</a></h1>
+    <div class="amount-caught-box">
+      <span>0</span>/151
+      <img class="normal-pokeball-icon" src="images/pokeball.png" width="25">
+      <img style="display: none;" class="gold-pokeball-icon" src="images/gold-pokeball.png" width="25">
+      <img style="display: none;"  class="star-icon" src="images/star.png" width="20">
+    </div>
+    <button onclick="catchAll()" class="catch-all">Catch all!</button>
     <div class="search-container">
       <input style="text-transform: capitalize" spellcheck="false" type="text" id="pokemon-name" placeholder="Enter Pokemon Name or Dex #">
-      <button onclick="fetchData()"><img width="60" src="images/pokeball.png"></button>
+      <button class="pokeball-button"><img width="60" src="images/pokeball.png"></button>
     </div>
-    <button class="random-button" onclick="chooseRandom()">Random!</button>
   </div>
-
   
-  <div class="attributes">
-    <h2 class="name-box" style="display: none" ></h2>
-    <img src="" alt="Pokemon Sprite" id="pokemon-sprite" style="display: none;">
-    <div class="type-box">
-      <div class="type-1" style="display: none;"></div>
-      <div class="type-2" style="display: none;"></div>
-    </div>
+  <div class="allPokemonContainer">
+    
   </div>
-
 
   <script src="index.js"></script>
 </body>
